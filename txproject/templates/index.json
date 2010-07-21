@@ -1,0 +1,33 @@
+{"test":{
+      "directories":[
+        "<project>/test",
+        "twisted/plugins"
+      ],
+      "files":[
+        {"<project>/web.py":"web.py"},
+        {"<project>/test/test_web.py":"test_web.py"},
+        {"twisted/plugins/<project>_plugin.py":"web_plugin.py"}
+      ]
+  },
+ "default":{
+        "directories":[
+            "<project>/static",
+            "<project>/test",
+            "<project>/web",
+            "twisted/plugins"
+        ],
+        "files":[
+            {"<project>/__init__.py":"Default/default/__init__.py"},
+            {"<project>/server.py":"Default/default/server.py"},
+            {"<project>/settings.py":"Default/default/settings.py"},
+            {"<project>/static/root.html":"Default/default/static/root.html"},
+            {"<project>/web/__init__.py":"Default/default/web/__init__.py"},
+            {"<project>/web/root.py":"Default/default/web/root.py"},
+            {"<project>/test/__init__.py":"Default/default/test/__init__.py"},
+            {"<project>/test/test_server.py":"Default/default/test/test_server.py"},
+            {"<project>/test/test_web.py":"Default/default/test/test_web.py"},
+            {"twisted/plugins/<project>_plugin.py":"Default/twisted/plugins/default_plugin.py"}
+        ]
+ }
+}
+
