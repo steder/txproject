@@ -52,7 +52,6 @@ class NewProject(object):
             path = os.path.join(self.root,
                              self.projectName(),
                              d)
-            print "path:", path
             os.makedirs(path)
             
     def makeFiles(self):
@@ -63,8 +62,6 @@ class NewProject(object):
                 path = os.path.join(self.root,
                                     self.projectName(),
                                     f)
-                print "path:", path
-
                 contents = open(os.path.join(self.templateRoot, realPath), "r").read()
                 contents = contents.replace(self.templateName.capitalize(), self.projectName())
                 contents = contents.replace(self.templateName, self.name)
