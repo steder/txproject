@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+import distribute_setup
+distribute_setup.use_setuptools()
+
+from setuptools import setup
+
 
 setup(name='txProject',
       version='1.0.0a1',
@@ -9,5 +13,5 @@ setup(name='txProject',
       author_email='steder@gmail.com',
       url='http://bitbucket.org/steder/txproject',
       packages=['txproject',],
-      scripts=['bin/dirprinter', 'bin/txproject']
+      scripts=['bin/dirprinter', 'bin/txproject'],
      )

@@ -4,7 +4,11 @@ Reads a template into memory
 """
 
 import os
-import simplejson
+try:
+    import json
+except ImportError:
+    import simplejson as json
+
 
 
 DEFAULT_TEMPLATE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "templates")
@@ -41,7 +45,7 @@ class TemplateRegistry(object):
         self.templates = {}
         if self.template_dir is not None:
             tocFile = open(os.path.join(self.template_dir, "index.json"), "r")
-            toc = simplejson.load(
+            toc = json.load(
                 tocFile
             )
             for templateName in toc:
